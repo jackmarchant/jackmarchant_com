@@ -1,17 +1,5 @@
 <!DOCTYPE html>
-<!--
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Simple. by Sara (saratusar.com, @saratusar) for Innovatif - an awesome Slovenia-based digital agency (innovatif.com/en)
-Change it, enhance it and most importantly enjoy it!
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
--->
-
-<!--[if !IE]><!-->
 <html lang="$ContentLocale">
-<!--<![endif]-->
-<!--[if IE 6 ]><html lang="$ContentLocale" class="ie ie6"><![endif]-->
-<!--[if IE 7 ]><html lang="$ContentLocale" class="ie ie7"><![endif]-->
-<!--[if IE 8 ]><html lang="$ContentLocale" class="ie ie8"><![endif]-->
 <head>
 	<title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
 	<meta charset="utf-8">
@@ -21,23 +9,23 @@ Change it, enhance it and most importantly enjoy it!
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<% require themedCSS('reset') %>
-	<% require themedCSS('typography') %>
-	<% require themedCSS('form') %>
-	<% require themedCSS('layout') %>
+	<% require themedCSS('main') %>
 	<link rel="shortcut icon" href="themes/silverstripe/images/favicon.ico" />
 </head>
-<body class="$ClassName.ShortName<% if not $Menu(2) %> no-sidebar<% end_if %>" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
-<% include Header %>
-<div class="main" role="main">
-	<div class="inner typography line">
+<body class="landing $ClassName.ShortName<% if not $Menu(2) %> no-sidebar<% end_if %>" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
+	<% include Header %>
+	<% if URLSegment == 'home' %>
+		<% include Banner %>
+	<% end_if %>
+	<div id="main" role="main" class="wrapper">
 		$Layout
 	</div>
-</div>
-<% include Footer %>
+	<% include Footer %>
 
-<% require javascript('//code.jquery.com/jquery-1.7.2.min.js') %>
-<% require themedJavascript('script') %>
+	<% require themedJavascript('jquery.min') %>
+	<% require themedJavascript('skel.min') %>
+	<% require themedJavascript('util') %>
+	<% require themedJavascript('main') %>
 
 </body>
 </html>

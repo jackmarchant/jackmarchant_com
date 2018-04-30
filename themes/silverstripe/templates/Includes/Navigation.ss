@@ -1,5 +1,4 @@
-<nav class="primary">
-	<span class="nav-open-button">²</span>
+<nav id="nav">
 	<ul>
 		<% loop $Menu(1) %>
 			<li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
