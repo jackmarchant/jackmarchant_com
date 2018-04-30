@@ -4,6 +4,7 @@
 if(isset($_ENV['CLEARDB_DATABASE_URL'])) {
 	global $databaseConfig;
 	$parts = parse_url($_ENV['CLEARDB_DATABASE_URL']);
+	var_dump($parts);
 	$databaseConfig['type'] = 'MySQLDatabase';
 	$databaseConfig['server'] = $parts['host'];
 	$databaseConfig['username'] = $parts['user'];
