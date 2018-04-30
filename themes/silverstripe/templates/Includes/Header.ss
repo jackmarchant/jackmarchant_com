@@ -4,3 +4,5 @@
 	</h1>
 	<% include Navigation %>
 </header>
+
+<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
