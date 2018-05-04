@@ -10,6 +10,7 @@
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<% require themedCSS('main') %>
+	<% require themedCSS('style') %>
 	<link rel="shortcut icon" href="themes/silverstripe/images/favicon.ico" />
 </head>
 <body class="landing $ClassName.ShortName<% if not $Menu(2) %> no-sidebar<% end_if %>" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>

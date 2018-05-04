@@ -1,9 +1,11 @@
 <section id="main" class="wrapper">
 	<div class="container">
 
-		<header class="major special">
-			<h2>$Title</h2>
-		</header>
+		<% if URLSegment != 'home' %>
+			<header class="major special">
+				<h2>$Title</h2>
+			</header>
+		<% end_if %>
 
 		<div>$Content</div>
 
