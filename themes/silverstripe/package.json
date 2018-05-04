@@ -1,0 +1,22 @@
+{
+  "name": "jackmarchant_com",
+  "version": "1.0.0",
+  "description": "Website for jackmarchant.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackmarchant/jackmarchant_com"
+  },
+  "keywords": [
+    "Website"
+  ],
+  "author": "Jack Marchant",
+  "license": "ISC",
+  "dependencies": {
+    "uglifycss": "^0.0.29"
+  }
+}
