@@ -14,7 +14,8 @@
     },
     "extra": {
         "expose": [
-            "themes/silverstripe"
+            "themes/silverstripe",
+            "vendor/silverstripe"
         ],
         "project-files-installed": [
             ".env.example",
