@@ -6,9 +6,9 @@
     <% loop $Children %>
       <div class="article-item">
         <h3 class="article-item__title"><a href="$Link">$Title</a></h3>
-        <p>$Created.Nice</p>
+        <p>$LastEdited.Format("d/M/YYYY")</p>
         <div class="article-item__content">
-          $Content.LimitWordCount(200)
+          $Content.LimitCharacters(50)
         </div>
       </div>
     <% end_loop %>
