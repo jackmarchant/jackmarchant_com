@@ -1,5 +1,5 @@
 FROM php:7.1-apache
-MAINTAINER Brett Tasker "<brett@silverstripe.com>"
+MAINTAINER Jack Marchant "<jack@jackmarchant.com>"
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install components
@@ -61,7 +61,7 @@ RUN { \
 	} | tee /etc/apache2/sites-available/000-default.conf
 
 RUN echo "ServerName localhost" > /etc/apache2/conf-available/fqdn.conf && \
-	echo "date.timezone = Pacific/Auckland" > /usr/local/etc/php/conf.d/timezone.ini && \
+	echo "date.timezone = Australia/Sydney" > /usr/local/etc/php/conf.d/timezone.ini && \
 	a2enmod rewrite expires remoteip cgid && \
 	usermod -u 1000 www-data && \
 	usermod -G staff www-data

@@ -1,3 +1,11 @@
 #header:not(.alt) li.current a, #header:not(.alt) li.section a {
   border-bottom: 2px solid #484848;
 }
+
+.article-item {
+  margin-bottom: 50px;
+}
+
+.article-item__title {
+  margin-bottom: 0;
+}

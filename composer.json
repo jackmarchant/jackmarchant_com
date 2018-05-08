@@ -1,6 +1,6 @@
 {
     "name": "jackmarchant/silverstripe",
-    "description": "An example silverstripe website",
+    "description": "SilverStripe project for jackmarchant.com",
     "type": "silverstripe-project",
     "require": {
         "ext-gd": "*",
