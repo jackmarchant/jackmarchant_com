@@ -32,24 +32,33 @@ class HirePageController extends PageController
 
     public function submit($data, $form)
     { 
-        $email = new Email(); 
-
-        $email->setTo('jack@jackmarchant.com'); 
-        $email->setFrom($data['email']); 
-        $email->setSubject("Hire request from {$data["name"]}"); 
-
         $messageBody = " 
             <p><strong>Name:</strong> {$data['name']}</p> 
             <p><strong>Email:</strong> {$data['email']}</p> 
             <p><strong>Website:</strong> {$data['link']}</p>
             <p><strong>Description:</strong> {$data['description']}</p>
         "; 
-        $email->setBody($messageBody); 
-        $email->send();
+
+        $from = new SendGrid\Email(null, $data['email']);
+        $subject = "Hire request from {$data["name"]}";
+        $to = new SendGrid\Email(null, getenv('ADMIN_EMAIL'));
+        $content = new SendGrid\Content('text/html', $messageBody);
+        $mail = new SendGrid\Mail($from, $subject, $to, $content);
+
+        $apiKey = getenv('SENDGRID_API_KEY');
+        $sg = new \SendGrid($apiKey);
+
+        $response = $sg->client->mail()->send()->post($mail);
+        
+        if ($response) {
+            return [
+                'Content' => 'Thank you for getting in touch. I will get back to you as soon as possible.',
+                'Form' => ''
+            ];
+        }
 
         return [
-            'Content' => 'Thank you for getting in touch. I will get back to you as soon as possible.',
-            'Form' => ''
+            'Form' => $form,
         ];
     }
 }

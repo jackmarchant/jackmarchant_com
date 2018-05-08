@@ -8,33 +8,15 @@ build:
 	$(COMPOSE) pull
 	$(COMPOSE) build
 
-update: composer-install
-
-composer-dump-autoload:
-	$(COMPOSE) run --rm composer dump-autoload -o
-
-composer-install:
-	$(COMPOSE) run --rm composer -nov install
-
-composer-update:
-	$(COMPOSE) run --rm composer -nov update
-
-composer-refresh-lock:
-	$(COMPOSE) run --rm composer -nov update --lock
-
-composer-require: PACKAGE?=
-composer-require:
-	$(COMPOSE) run --rm composer require $(PACKAGE)
-
-composer-require-dev: PACKAGE?=
-composer-require-dev:
-	$(COMPOSE) run --rm composer require --dev $(PACKAGE)
-
 up:
 	$(COMPOSE) up -d
 
 down:
 	$(COMPOSE) down
+
+reload:
+	$(COMPOSE) down 
+	$(COMPOSE) up
 
 # Tail the docker compose logs
 logs:
