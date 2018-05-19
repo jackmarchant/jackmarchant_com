@@ -1,18 +1,10 @@
-<section id="main" class="wrapper">
-	<div class="container">
+<section id="main" class="content-wrapper">
 
-		<% if URLSegment != 'home' %>
-			<header class="major special">
-				<h2>$Title</h2>
-			</header>
-		<% end_if %>
+	<div>$Content</div>
 
-		<div>$Content</div>
-
-		<div>
-			$Form
-			$CommentsForm
-		</div>
-
+	<div>
+		$Form
+		$CommentsForm
 	</div>
+
 </section>

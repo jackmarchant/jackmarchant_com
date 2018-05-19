@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build/build.js"
+    "build": "node_modules/.bin/gulp",
+    "watch": "node_modules/.bin/gulp sass:watch"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,10 @@
   ],
   "author": "Jack Marchant",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
     "uglifycss": "^0.0.29"
   }
 }

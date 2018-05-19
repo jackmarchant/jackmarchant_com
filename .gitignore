@@ -4,3 +4,4 @@
 /resources/
 /public/resources/
 node_modules
+yarn-error.log

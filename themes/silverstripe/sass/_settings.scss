@@ -1,0 +1,37 @@
+// colours
+$color-primary: #2c2f34;
+$color-secondary: #d6b161;
+$color-light-gray: #efefef;
+$color-white: #ffffff;
+$color-black: #000000;
+
+// font sizes
+$font-size-small: 0.8rem;
+$font-size-default: 1rem;
+$font-size-large: 1.5rem;
+$font-size-huge: 3em;
+
+// spacing
+$spacing-small: 0.5rem;
+$spacing-default: 1rem;
+$spacing-large: 2rem;
+$spacing-huge: 3rem;
+
+// font
+@font-face {
+  font-family: freight-sans-medium;
+  src: url('../fonts/Freight\ Sans\ Medium.otf');
+}
+
+@font-face {
+  font-family: anson-regular;
+  src: url('../fonts/Anson-Regular.otf');
+}
+
+// defaults
+body {
+  font-family: freight-sans-medium;
+  font-size: 1em;
+  color: $color-primary;
+  background-color: $color-white;
+}

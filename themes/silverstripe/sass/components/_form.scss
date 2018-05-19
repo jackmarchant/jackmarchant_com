@@ -1,0 +1,28 @@
+/**
+ * Form
+ */
+
+.text input, .textarea textarea {
+  width: 100%;
+  padding: 1em;
+  background: $color-white;
+  border: 1px solid rgba(0,0,0,.12);
+  font-size: $font-size-default;
+  line-height: normal;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.field label {
+  display: block;
+  margin-bottom: $spacing-small;
+}
+
+.field {
+  margin-bottom: $spacing-large;
+}
+
+.checkbox input {
+  float: left;
+  margin-right: $spacing-small;
+}
