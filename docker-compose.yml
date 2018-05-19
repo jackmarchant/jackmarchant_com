@@ -19,6 +19,8 @@ services:
       SS_ENVIRONMENT_TYPE: dev
       SS_DEFAULT_ADMIN_USERNAME: admin
       SS_DEFAULT_ADMIN_PASSWORD: password
+      ADMIN_EMAIL:
+      SENDGRID_API_KEY:
     depends_on:
        - mysql
 

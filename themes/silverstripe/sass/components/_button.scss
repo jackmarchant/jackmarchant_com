@@ -1,0 +1,22 @@
+/**
+ * Button
+ */
+
+.button, .btn-toolbar .action {
+  border: 1px solid $color-black;
+  background-color: $color-white;
+  color: $color-black;
+  font-size: $font-size-default;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: 200ms ease all;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button:hover, .btn-toolbar .action:hover {
+  background-color: $color-black;
+  color: $color-white;
+}

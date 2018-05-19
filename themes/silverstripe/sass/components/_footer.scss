@@ -1,0 +1,23 @@
+/**
+ * Footer
+ */
+
+.footer {
+  color: $color-primary;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  max-width: 500px;
+}
+
+.footer a {
+  text-decoration: none;
+  padding: $spacing-default;
+}
+
+.copyright {
+  text-align: center;
+}
