@@ -1,4 +1,4 @@
-<footer id="footer" class="footer">
+<footer class="footer">
 	<div class="container">
 		<ul class="icons-list">
 			<li>

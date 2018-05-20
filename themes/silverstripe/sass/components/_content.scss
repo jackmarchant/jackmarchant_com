@@ -7,16 +7,29 @@ p {
   margin-bottom: $spacing-large;
 }
 
-img {
-  margin-bottom: $spacing-large;
-}
 
-a {
-  color: $color-primary;
-}
+.content-wrapper {
+  img {
+    margin-bottom: $spacing-large;
+  }
+  
+  a {
+    color: $color-primary;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
 
-a:hover {
-  text-decoration: none;
+  ul {
+    padding-left: $spacing-default;
+  }
+  
+  ul li {
+    list-style-type: disc;
+    margin-bottom: $spacing-default;
+    line-height: 1.5;
+  }
 }
 
 pre {

@@ -2,24 +2,24 @@
  * Nav
  */
 
-.c-nav {
+.nav {
   background-color: $color-secondary;
   padding-top: $spacing-large;
   padding-bottom: $spacing-large;
 }
 
-.c-nav ul {
+.nav ul {
   display: flex;
   justify-content: space-around;
   margin: auto;
   max-width: 500px;
 }
 
-.c-nav__item.current a, .c-nav__item.section a {
+.nav__item.current a, .nav__item.section a {
   border-bottom: 2px solid $color-primary;
 }
 
-.c-nav__item a {
+.nav__item a {
   text-transform: uppercase;
   color: $color-primary;
   text-decoration: none;
